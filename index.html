@@ -2,22 +2,29 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Homepage Dinh Photography</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./main_pages.css" rel="stylesheet" />
+    <title>Homepage Dinh Photography</title>
+    <link rel="stylesheet" href="./main_pages.css" />
   </head>
-
   <body>
-    <section class="top_bar">
-      <h2>Jennifer Dinh | Photography</h2>
+    <header>
+      <a href="./index.html" class="nav_links">
+        <h2>Jennifer Dinh</h2>
+      </a>
 
-      <div class="navigation_bar">
-        <a href="./Contact1.html" class="nav_links">Contact</a>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav id="nav">
+        <a href="#" class="nav_links" id="contact_link">Contact</a>
         <a href="./Works1.html" class="nav_links">Works</a>
         <a href="./about.html" class="nav_links">About</a>
         <a href="./index.html" class="nav_links">Home</a>
-      </div>
-    </section>
+      </nav>
+    </header>
 
     <main>
       <section class="home">
@@ -30,23 +37,52 @@
           <img src="./images/quan_ao.JPG" alt="Homepage Image" />
         </div>
 
+        <form action="" method="">
+          <div class="contact_overlay" id="contact_overlay">
+            <button class="close_btn" id="close_button">&times;</button>
+
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+
+            <div>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div>
+              <label for="message">Leave a message</label>
+              <textarea name="message" id="message" required></textarea>
+            </div>
+            <button type="submit">Send message</button>
+          </div>
+        </form>
+
         <section class="home_projects">
           <h1>Projects</h1>
           <div class="images_container">
             <div class="image_cell">
-              <img src="./images/ngoai_ca.JPG" alt="Hands" />
+              <a href="./project1.html">
+                <img src="./images/ngoai_ca.JPG" alt="Hands" />
+              </a>
               <p>Hands</p>
+              <p>Explores hands.</p>
             </div>
             <div class="image_cell off_center">
-              <img src="./images/bisque.JPG" alt="Process" />
+              <a href="project2.html">
+                <img src="./images/bisque.JPG" alt="Process" />
+              </a>
               <p>Proccees</p>
+              <p>Explores proccesses from beggining to end.</p>
             </div>
             <div class="image_cell off_center1">
               <img src="./images/fish_bw.JPG" alt="Relationships" />
               <p>Relationship</p>
+              <p>
+                Explores the relationship individuals have with others and
+                objects.
+              </p>
             </div>
           </div>
-          <a href="./projects.html" class="home_button nav_links proj_button"
+          <a href="" class="home_button nav_links proj_button"
             >See all Projects</a
           >
         </section>
@@ -70,12 +106,12 @@
             </div>
           </div>
 
-          <img src="./images/hoa01.JPG" alt="Flowers image" />
+          <img src="./images/PolkDot_Lady.JPG" alt="Vendor in polka dots" />
         </div>
       </section>
     </main>
 
-    <section class="bottom_bar">
+    <footer>
       <div class="social_media">
         <a href="mailto:jenniferdinh38@gmail.com" target="_blank">
           <img src="./images/mail.png" alt="email icon" />
@@ -87,6 +123,8 @@
           <img src="./images/instagram.png" alt="instagram icon" />
         </a>
       </div>
-    </section>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>

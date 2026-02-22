@@ -2,23 +2,29 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>About Dinh Photography</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./main_pages.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com" rel="stylesheet" />
+    <title>Homepage Dinh Photography</title>
+    <link rel="stylesheet" href="./main_pages.css" />
   </head>
-
   <body>
-    <section class="top_bar">
-      <h2>Jennifer | Dinh Photography</h2>
+    <header>
+      <a href="./index.html" class="nav_links">
+        <h2>Jennifer Dinh</h2>
+      </a>
 
-      <div class="navigation_bar">
-        <a href="./Contact1.html" class="nav_links">Contact</a>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav id="nav">
+        <a href="#" class="nav_links" id="contact_link">Contact</a>
         <a href="./Works1.html" class="nav_links">Works</a>
         <a href="./about.html" class="nav_links">About</a>
         <a href="./index.html" class="nav_links">Home</a>
-      </div>
-    </section>
+      </nav>
+    </header>
 
     <main>
       <section class="about">
@@ -55,9 +61,9 @@
       </section>
     </main>
 
-    <section class="bottom_bar">
+    <footer>
       <div class="social_media">
-        <a href="" target="_blank">
+        <a href="mailto:jenniferdinh38@gmail.com" target="_blank">
           <img src="./images/mail.png" alt="email icon" />
         </a>
         <a href="https://github.com/devbyjen388" target="_blank">
@@ -67,6 +73,8 @@
           <img src="./images/instagram.png" alt="instagram icon" />
         </a>
       </div>
-    </section>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
