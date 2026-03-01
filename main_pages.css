@@ -1,7 +1,13 @@
 /************************************************************************************/
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
+
+li {
+  list-style: none;
+}
+
 *,
 *:before,
 *:after {
@@ -11,6 +17,8 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
+
+  font-family: "Times New Roman", Times, serif;
 }
 
 header,
@@ -19,20 +27,20 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 150px;
+  height: 115px;
   background-color: #e6e6e6;
 }
 
-header h2 {
+header h3 {
   flex: 1;
   font-weight: normal;
   padding-left: 6rem;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
 }
 
 .nav_links {
-  font-size: 1.5rem;
-  padding-right: 5rem;
+  font-size: 1.3rem;
+  padding-right: 4rem;
   color: black;
   text-decoration: none;
 }
@@ -103,9 +111,59 @@ nav {
   width: 20px;
   height: 20px;
 }
+/*****WORKS OVERLAY******/
+.nav_group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
+.contact_overlay.works_overlay {
+  top: 120px;
+  transform: translateX(90%);
+
+  width: 20%;
+  height: 30vh;
+}
+
+.works_overlay.active {
+  visibility: hidden;
+}
+
+.content_group {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 3rem;
+}
 /*****CONTACT FORM******/
+.contact_form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 
+  padding: 2rem 3rem;
+}
+.form_group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+label {
+  font-size: 1.3rem;
+}
+
+input {
+  width: 50%;
+  height: 30px;
+
+  font-size: 18px;
+}
+textarea {
+  width: 90;
+  height: 150px;
+
+  font-size: 18px;
+}
 .no-scroll {
   overflow: hidden;
   height: 100%;
@@ -123,14 +181,18 @@ nav {
 .close_btn:hover {
   cursor: pointer;
 }
+
 .contact_overlay {
   visibility: hidden;
 
   position: fixed;
-  top: 125px;
-  left: 15%;
-  width: 70%;
-  height: 80vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 40%;
+  height: 50vh;
+
   background-color: white;
   border-radius: 3%;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
@@ -143,10 +205,27 @@ nav {
   opacity: 1;
 }
 
+button[type="submit"] {
+  width: 20%;
+  height: 40px;
+  border-radius: 5px;
+
+  border: 1.5px solid #000;
+  background-color: #000;
+  color: #fff;
+}
 /**********************/
+.home_projects h2,
+.gallery_home_text h2 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.home_projects h3 {
+  font-weight: normal;
+}
 .home {
-  font-size: 1.5rem;
-  font-family: "EB Garamond", "Adobe Garamond Pro", "Garamond", serif;
+  font-size: 1.2rem;
 }
 .section_block {
   display: flex;
@@ -166,14 +245,14 @@ nav {
   padding-right: 6rem;
 }
 .home_container h1 {
-  font-size: 4rem;
-  font-weight: bolder;
+  font-weight: 400;
+  font-size: 2.4rem;
   margin-bottom: 0;
 }
 
 .home_container img {
   width: 95%;
-  height: 900px;
+  height: 720px;
   object-fit: cover;
 
   border-radius: 10px;
@@ -199,10 +278,6 @@ nav {
 .proj_button {
   width: auto;
   padding: 5px 29px;
-}
-
-.home_projects h1 {
-  padding-bottom: 30px;
 }
 
 .images_container {

@@ -9,7 +9,7 @@
   <body>
     <header>
       <a href="./index.html" class="nav_links">
-        <h2>Jennifer Dinh</h2>
+        <h3>Jennifer Dinh</h3>
       </a>
 
       <div class="hamburger" id="hamburger">
@@ -20,44 +20,77 @@
 
       <nav id="nav">
         <a href="#" class="nav_links" id="contact_link">Contact</a>
-        <a href="./works.html" class="nav_links">Works</a>
+        <a href="#" class="nav_links" id="works_link">Works</a>
         <a href="./about.html" class="nav_links">About</a>
         <a href="./index.html" class="nav_links">Home</a>
       </nav>
     </header>
 
     <main>
+      <div class="contact_overlay" id="contact_overlay">
+        <form class="contact_form" action="#" method="post">
+          <button type="button" class="close_btn" id="close_button_form">
+            &times;
+          </button>
+
+          <div class="form_group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form_group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form_group">
+            <label for="message">Leave a message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+
+          <button type="submit">Send message</button>
+        </form>
+      </div>
+
+      <div class="contact_overlay works_overlay" id="works_overlay">
+        <div class="content_group">
+          <div class="nav_group">
+            <a href="./gallery.html" class="nav_links">Gallery</a>
+            <a
+              href="./index.html#projects"
+              class="nav_links proj_works_link"
+              id="proj_works_link"
+              >Projects</a
+            >
+          </div>
+
+          <ul>
+            <li>
+              <a href="./project1.html" class="nav_links">Hands</a>
+            </li>
+            <li><a href="./project2.html" class="nav_links">Process</a></li>
+            <li>
+              <a href="./project3.html" class="nav_links">Relationship</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
       <section class="home">
         <div class="home_container section_block">
-          <h1>Dinh Photography</h1>
-          <p>Vietnamese-American photographer based in the U.S.</p>
+          <h1>Vietnamese-American Photographer</h1>
+          <p>
+            Based in the U.S., exploring the interplay of color and movement in
+            photography.
+          </p>
 
           <a href="./about.html" class="home_button nav_links">About</a>
 
           <img src="./images/quan_ao.JPG" alt="Homepage Image" />
         </div>
 
-        <form action="#" method="post">
-          <div class="contact_overlay" id="contact_overlay">
-            <button class="close_btn" id="close_button">&times;</button>
-
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required />
-
-            <div>
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-            <div>
-              <label for="message">Leave a message</label>
-              <textarea name="message" id="message" required></textarea>
-            </div>
-            <button type="submit">Send message</button>
-          </div>
-        </form>
-
-        <section class="home_projects section_block">
-          <h1>Projects</h1>
+        <section class="home_projects section_block" id="projects">
+          <h2>Projects</h2>
           <div class="images_container">
             <div class="image_cell">
               <a href="./project1.html">
@@ -66,21 +99,21 @@
                   alt="Red Basket Holding Fish with Knife"
                 />
               </a>
-              <p>Hands</p>
+              <h3>Hands</h3>
               <p>Explores hands.</p>
             </div>
             <div class="image_cell off_center">
               <a href="project2.html">
                 <img src="./images/bisque.JPG" alt="Bisqued Pottery" />
               </a>
-              <p>Proccees</p>
-              <p>Explores proccesses from beggining to end.</p>
+              <h3>Processes</h3>
+              <p>Explores processes from beginning to end.</p>
             </div>
             <div class="image_cell off_center1">
               <a href="project3.html">
                 <img src="./images/fish_bw.JPG" alt="Men Harvesting Fish" />
               </a>
-              <p>Relationship</p>
+              <h3>Relationship</h3>
               <p>
                 Explores the relationship individuals have with others and
                 objects.
@@ -95,7 +128,7 @@
         <div class="gallery_home">
           <div class="gallery_home_text">
             <div class="gallery_home_text_content">
-              <h1>Gallery</h1>
+              <h2>Gallery</h2>
             </div>
             <div class="gallery_home_text_content">
               <p>
