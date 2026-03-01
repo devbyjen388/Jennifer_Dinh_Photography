@@ -31,11 +31,10 @@ footer {
   background-color: #e6e6e6;
 }
 
-header h3 {
+header p {
   flex: 1;
   font-weight: normal;
   padding-left: 6rem;
-  font-size: 1.3rem;
 }
 
 .nav_links {
@@ -83,19 +82,17 @@ nav {
 }
 
 .about_text h1 {
-  font-size: 3rem;
-  font-weight: bolder;
-
   text-align: center;
   padding-left: 8rem;
   margin-top: -10;
   margin-bottom: 3rem;
 }
 
+p {
+  font-size: 1.3rem;
+}
 .about_text p {
-  font-size: 25px;
   line-height: 1.5;
-
   padding-left: 9rem;
 }
 
@@ -244,7 +241,7 @@ button[type="submit"] {
   margin-top: 1rem;
   padding-right: 6rem;
 }
-.home_container h1 {
+h1 {
   font-weight: 400;
   font-size: 2.4rem;
   margin-bottom: 0;
@@ -273,6 +270,13 @@ button[type="submit"] {
   border: 1.5px solid #000;
   background-color: #000;
   color: #fff;
+
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+.home_button:hover {
+  opacity: 0.5;
 }
 
 .proj_button {
@@ -414,8 +418,6 @@ button[type="submit"] {
   display: grid;
   grid-template-rows: auto;
   gap: 15px;
-
-  padding-bottom: 20rem;
 }
 .grid img {
   width: 100%;
@@ -424,10 +426,6 @@ button[type="submit"] {
 }
 #grid-1 {
   grid-template-columns: 2fr 1fr 1fr;
-}
-
-.grid-2 {
-  grid-template-columns: 1fr 1fr;
 }
 #big-image1 {
   grid-row: span 2;
@@ -439,7 +437,37 @@ button[type="submit"] {
 }
 
 /*********************meta tags*****************/
-@media (max-width: 768px) {
+@media (max-width: 1395px) {
+  .gallery_content {
+    column-count: 2;
+  }
+  .about_container {
+    flex-direction: column;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .about_container img {
+    width: 80%;
+    height: auto;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .about_text p {
+    text-align: center;
+    padding: 0 4rem;
+    margin-bottom: 0;
+  }
+  .about_text h1 {
+    padding-left: 0;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: -0.25rem;
+    font-size: 2rem;
+  }
+}
+@media (max-width: 800px) {
   .hamburger {
     display: flex;
     flex-direction: column;
@@ -470,7 +498,7 @@ button[type="submit"] {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-color: white;
     flex-direction: column;
@@ -479,6 +507,14 @@ button[type="submit"] {
     gap: 30px;
     opacity: 0;
     transition: opacity 0.3s ease;
+
+    padding-right: 0;
+  }
+
+  .nav_links {
+    padding-right: 0;
+
+    font-size: 1.5rem;
   }
 
   nav.active {
@@ -490,13 +526,14 @@ button[type="submit"] {
   footer {
     height: 50px;
   }
-  header h2 {
+  header h3 {
     font-size: 0.6rem;
+    padding-left: 2rem;
   }
   p {
     font-size: 0.8rem;
   }
-  header h2 {
+  header p {
     padding-left: 1.5rem;
   }
   .social_media {
@@ -513,7 +550,7 @@ button[type="submit"] {
     margin-top: 0;
   }
 
-  .home_container h1 {
+  h1 {
     font-size: 2rem;
   }
 
@@ -542,14 +579,17 @@ button[type="submit"] {
     width: 50px;
     height: 25px;
     border-radius: 2px;
+
+    font-size: 0.8rem;
   }
 
-  .nav_links {
-    font-size: 0.75rem;
+  .see {
+    display: none;
   }
 
   .images_container {
     flex-direction: column;
+    width: 100%;
     gap: 20px;
   }
 
@@ -566,12 +606,57 @@ button[type="submit"] {
   .gallery_home_text {
     width: 100%;
   }
-  .gallery_home_text_content h1 {
-    font-size: 1.9rem;
+
+  .gallery_home_text_content:nth-child(2) {
+    margin-top: -1rem;
   }
+
   .gallery_home img {
     width: 100%;
     margin-right: 0;
     object-position: center;
+  }
+
+  .section_block {
+    margin-bottom: 0;
+  }
+
+  .gallery_content {
+    column-count: 1;
+  }
+
+  .hero {
+    padding: 4rem 4rem;
+  }
+
+  .hero h1 {
+    font-size: 1.3rem;
+  }
+
+  .grid-container {
+    padding: 0 1rem; /* reduce the large side padding */
+
+    margin-bottom: 2rem;
+  }
+
+  #grid-1 {
+    grid-template-columns: 1fr; /* single column */
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr; /* single column */
+  }
+
+  #big-image1 {
+    grid-row: span 1; /* reset the row span */
+    height: 100%;
+  }
+
+  #big-image2 {
+    grid-column: 1; /* reset the column span */
+  }
+
+  .grid img {
+    height: 100%; /* consistent image height */
   }
 }
