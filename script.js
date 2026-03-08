@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const contact_link = document.getElementById("contact_link");
   const works_link = document.getElementById("works_link");
-  const proj_works_link = document.getElementById("proj_works_link");
+
   const contact_overlay = document.getElementById("contact_overlay");
   const works_overlay = document.getElementById("works_overlay");
   const hamburger = document.getElementById("hamburger");
@@ -22,11 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     contact_overlay.classList.toggle("active");
     document.body.classList.add("no-scroll");
-  });
-
-  proj_works_link.addEventListener("click", (e) => {
-    works_overlay.classList.toggle("active");
-    document.body.classList.remove("no-scroll");
   });
 
   works_link.addEventListener("click", (e) => {

@@ -24,9 +24,7 @@
         <a href="./about.html" class="nav_links">About</a>
         <a href="./index.html" class="nav_links">Home</a>
       </nav>
-    </header>
 
-    <main>
       <div class="contact_overlay" id="contact_overlay">
         <form class="contact_form" action="#" method="post">
           <button type="button" class="close_btn" id="close_button_form">
@@ -56,17 +54,12 @@
         <div class="content_group">
           <div class="nav_group">
             <a href="./gallery.html" class="nav_links">Gallery</a>
-            <a
-              href="./index.html#projects"
-              class="nav_links proj_works_link"
-              id="proj_works_link"
-              >Projects</a
-            >
+            <a href="./projects.html" class="nav_links">Projects</a>
           </div>
 
           <ul>
             <li>
-              <a href="./project1.html" class="nav_links">Hands</a>
+              <a href="./project1.html" class="nav_links">Hands & Shape</a>
             </li>
             <li><a href="./project2.html" class="nav_links">Process</a></li>
             <li>
@@ -75,78 +68,89 @@
           </ul>
         </div>
       </div>
-
-      <section class="home">
-        <div class="home_container section_block">
+    </header>
+    <main>
+      <section class="home section_block">
+        <div class="home_container">
           <h1>Vietnamese-American Photographer</h1>
           <p>
             Based in the U.S., exploring the interplay of color and movement in
             photography.
           </p>
 
-          <a href="./about.html" class="home_button">About</a>
+          <a href="./about.html" class="button about-button">About</a>
 
-          <img src="./images/quan_ao.JPG" alt="Homepage Image" />
-        </div>
-
-        <section class="home_projects section_block" id="projects">
-          <h2>Projects</h2>
-          <div class="images_container">
-            <div class="image_cell">
-              <a href="./project1.html">
-                <img
-                  src="./images/ngoai_ca.JPG"
-                  alt="Red Basket Holding Fish with Knife"
-                />
-              </a>
-              <h3>Hands</h3>
-              <p>Explores hands.</p>
-            </div>
-            <div class="image_cell off_center">
-              <a href="project2.html">
-                <img src="./images/bisque.JPG" alt="Bisqued Pottery" />
-              </a>
-              <h3>Processes</h3>
-              <p>Explores processes from beginning to end.</p>
-            </div>
-            <div class="image_cell off_center1">
-              <a href="project3.html">
-                <img src="./images/fish_bw.JPG" alt="Men Harvesting Fish" />
-              </a>
-              <h3>Relationship</h3>
-              <p>
-                Explores the relationship individuals have with others and
-                objects.
-              </p>
-            </div>
-          </div>
-          <a href="projects.html" class="home_button proj_button"
-            ><span class="see">See all </span>Projects</a
-          >
-        </section>
-
-        <div class="gallery_home">
-          <div class="gallery_home_text">
-            <div class="gallery_home_text_content">
-              <h2>Gallery</h2>
-            </div>
-            <div class="gallery_home_text_content">
-              <p>
-                Explore my curated gallery of photographs, showcasing a diverse
-                range of subjects and styles. Each image tells a unique story,
-                inviting you to experience the world through my lens.
-              </p>
-            </div>
-            <div class="gallery_home_text_content">
-              <a href="./gallery.html" class="home_button proj_button"
-                ><span class="see">See </span>Gallery</a
-              >
-            </div>
-          </div>
-
-          <img src="./images/PolkDot_Lady.JPG" alt="Vendor in polka dots" />
+          <img loading="lazy" src="./images/quan_ao.JPG" alt="Homepage Image" />
         </div>
       </section>
+
+      <section class="projects section_block">
+        <h2>Projects</h2>
+        <div class="projects-grid" id="projects">
+          <article class="project-card">
+            <a href="./project1.html">
+              <img
+                loading="lazy"
+                src="./images/ngoai_ca.JPG"
+                alt="Red Basket Holding Fish with Knife"
+              />
+            </a>
+            <h3>Hands & Shape</h3>
+            <p></p>
+          </article>
+          <article class="project-card off_center">
+            <a href="project2.html">
+              <img
+                loading="lazy"
+                src="./images/bisque.JPG"
+                alt="Bisqued Pottery"
+              />
+            </a>
+            <h3>Processes</h3>
+            <p></p>
+          </article>
+          <article class="project-card off_center1">
+            <a href="project3.html">
+              <img
+                loading="lazy"
+                src="./images/fish_bw.JPG"
+                alt="Men Harvesting Fish"
+              />
+            </a>
+            <h3>Relationship</h3>
+            <p></p>
+          </article>
+        </div>
+        <a href="projects.html" class="button proj_button"
+          ><span class="see">See all</span>&nbsp;Projects</a
+        >
+      </section>
+
+      <div class="gallery_home">
+        <div class="gallery_home_text">
+          <div class="gallery_home_text_content">
+            <h2>Gallery</h2>
+          </div>
+          <div class="gallery_home_text_content">
+            <p>
+              Explore my curated gallery of photographs, showcasing a diverse
+              range of subjects and styles. Each image tells a unique story,
+              inviting you to experience the world through my lens.
+            </p>
+          </div>
+          <div class="gallery_home_text_content">
+            <a href="./gallery.html" class="button gallery-button"
+              ><span class="see">See </span>&nbsp;Gallery</a
+            >
+          </div>
+        </div>
+
+        <img
+          loading="lazy"
+          src="./images/PolkDot_Lady.JPG"
+          alt="Vendor in polka dots"
+        />
+      </div>
     </main>
 
     <footer>

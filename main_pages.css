@@ -1,4 +1,5 @@
 /************************************************************************************/
+
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -28,7 +29,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   height: 115px;
-  background-color: #e6e6e6;
+  background-color: #bdbdbd;
 }
 
 header p {
@@ -212,35 +213,137 @@ button[type="submit"] {
   color: #fff;
 }
 /**********************/
-.home_projects h2,
-.gallery_home_text h2 {
+
+h2 {
   font-size: 2rem;
   font-weight: 400;
 }
 
-.home_projects h3 {
+.projects h3 {
   font-weight: normal;
+  font-size: 1.5rem;
 }
-.home {
-  font-size: 1.2rem;
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+
+  /*
+  margin-left: 3rem;
+  margin-right: 3rem; */
 }
-.section_block {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 10px;
-  padding-left: 6rem;
-  margin-bottom: 7rem;
-}
-.home_container {
-  align-items: left;
-  margin-top: 1em;
-}
+
+/*
 .home_projects {
   align-items: flex-start;
   margin-top: 1rem;
   padding-right: 6rem;
 }
+  */
+.projects {
+  margin-left: 6rem;
+  margin-right: 6rem;
+}
+
+.section_block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+
+  margin-bottom: 7rem;
+}
+
+.proj_button {
+  width: 180px;
+  padding: 5px 29px;
+}
+
+.gallery-button {
+  width: 150px;
+}
+
+.button {
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+  padding: 3px 18px;
+
+  margin-bottom: 5rem;
+  margin-top: 2rem;
+  border-radius: 10px;
+  height: 50px;
+
+  font-size: 1.3rem;
+  text-decoration: none;
+
+  border: 1.5px solid #000;
+  background-color: #000;
+  color: #fff;
+}
+
+.about-button {
+  width: 100px;
+}
+
+.project-card.coming-soon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 560px;
+  background: #f6f6f6;
+  color: #aaa;
+  border-style: dashed;
+  border-radius: 10px;
+}
+
+.project-card {
+  max-width: 1000px;
+
+  padding-right: 0;
+
+  overflow: hidden;
+}
+
+.projects-grid img {
+  width: 100%;
+  height: 560px;
+  object-fit: cover;
+
+  border-radius: 10px;
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.off_center img {
+  object-position: left center;
+}
+
+.off_center1 img {
+  object-position: 20%;
+}
+/**********************/
+.home {
+  font-size: 1.2rem;
+  margin-left: 6rem;
+}
+
+.home_container {
+  align-items: left;
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
 h1 {
   font-weight: 400;
   font-size: 2.4rem;
@@ -255,76 +358,8 @@ h1 {
   border-radius: 10px;
 }
 
-.home_button {
-  justify-content: center;
-  align-items: center;
-  display: inline-flex;
-  padding: 3px 18px;
-
-  width: 100px;
-  height: 50px;
-  margin-bottom: 5rem;
-  margin-top: 2rem;
-  border-radius: 10px;
-
-  border: 1.5px solid #000;
-  background-color: #000;
-  color: #fff;
-
-  font-size: 1.3rem;
-  text-decoration: none;
-}
-
 .home_button:hover {
   opacity: 0.5;
-}
-
-.proj_button {
-  width: auto;
-  padding: 5px 29px;
-}
-
-.images_container {
-  display: flex;
-  flex-direction: row;
-
-  justify-content: center;
-
-  width: fit-content;
-  gap: 20px;
-}
-
-.image_cell {
-  max-width: 1000px;
-
-  padding-right: 0;
-
-  overflow: hidden;
-}
-
-.images_container img {
-  width: 100%;
-  height: 560px;
-  object-fit: cover;
-
-  border-radius: 10px;
-
-  transition:
-    transform 0.4s ease,
-    box-shadow 0.4s ease;
-}
-
-.image_cell:hover img {
-  transform: scale(1.05);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
-}
-
-.off_center img {
-  object-position: left center;
-}
-
-.off_center1 img {
-  object-position: 20%;
 }
 
 .gallery_home {
@@ -367,9 +402,6 @@ h1 {
 
 /********gallery************/
 
-.gallery {
-  padding-bottom: 50px;
-}
 .hero {
   display: flex;
   flex-direction: column;
@@ -380,36 +412,9 @@ h1 {
   padding: 10rem 7rem;
 }
 
-.gallery_container h1 {
-  font-weight: bolder;
-  font-size: 3rem;
-}
-
-.gallery_container p {
-  font-size: 20px;
-}
-
-.gallery_content {
-  column-count: 3;
-  gap: 10px;
-
-  padding: 0 10px;
-}
-
-.gallery_content img {
-  width: 100%;
-  height: auto;
-
-  margin-bottom: 10px;
-  margin-right: 1.5rem;
-  display: block;
-
-  border-radius: 5px;
-}
-
 /******projects************/
 .grid-container {
-  padding: 0 6rem;
+  padding: 0 3rem;
   margin-bottom: 10rem;
 
   gap: 100px;
@@ -434,6 +439,10 @@ h1 {
 
 #big-image2 {
   grid-column: 2/4;
+}
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 
 /*********************meta tags*****************/
@@ -543,9 +552,12 @@ h1 {
     width: 10px;
     height: 10px;
   }
+  .home {
+    margin-left: 1.5rem;
+    grid-template-columns: 1fr;
+  }
 
   .home_container {
-    padding-left: 1.5rem;
     margin-bottom: 1.5rem;
     margin-top: 0;
   }
@@ -554,25 +566,29 @@ h1 {
     font-size: 2rem;
   }
 
-  .home_container p {
-    margin-top: -0.25rem;
-  }
-
   .home_container img {
     height: 500px;
   }
 
-  .home_projects {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    margin-bottom: 3rem;
-  }
-
-  .home_projects h1 {
+  .projects h1 {
     font-size: 1.9rem;
   }
 
-  .home_button {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .projects {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  .project-card img {
+    height: 348px;
+  }
+
+  .button {
     margin-top: 0.25rem;
     margin-bottom: 1rem;
 
@@ -593,9 +609,6 @@ h1 {
     gap: 20px;
   }
 
-  .images_container img {
-    height: 348px;
-  }
   .gallery_home {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
